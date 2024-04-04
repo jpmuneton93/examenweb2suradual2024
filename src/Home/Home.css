@@ -20,3 +20,12 @@
     z-index: -1;
 
 }
+
+.card{
+    background-color: rgb(202, 207, 217);
+}
+
+.card:hover{
+padding: 0.1rem;
+text-shadow: 0.1rem 0.3rem 1rem black;
+}

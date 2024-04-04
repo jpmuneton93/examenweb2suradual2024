@@ -1,4 +1,5 @@
 import "./Home.css"
+import basedatos from "../utils/basedatos.json"
 
 export function Home(){
 
@@ -38,6 +39,30 @@ export function Home(){
                 }
             </section>
         </section>
+
+        <section className="container mb-5">
+            <div className="row row-cols-1 row-cols-md-5 g-3">
+              {
+                basedatos.map(function(datos){
+                  return (
+                    <div className="col">
+                      <div className="card h-100 shadow px-2">
+                        <h4>  <u> <b> {datos.nombre} </b> </u> </h4>
+                        <br />
+                        <p> <b>Especialidad:</b> <br />{datos.especialidad} </p>
+                        <p> <b>Experiencia:</b> {datos.experiencia} </p>
+                        <p> <b>Correo:</b> <br /> {datos.correo} </p>
+                        <p> <b>Contacto:</b> {datos.contacto} </p>
+                        
+  
+                      </div>
+                    </div>
+                  )
+                })
+              }
+  
+            </div>
+          </section>
 
 
         
